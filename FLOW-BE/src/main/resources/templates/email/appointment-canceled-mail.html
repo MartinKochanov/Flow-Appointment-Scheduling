@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Appointment Canceled</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      color: #EF6C00;
+    }
+    .content {
+      margin-bottom: 20px;
+    }
+    .content p {
+      margin: 10px 0;
+    }
+    .content ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .content ul li {
+      margin-bottom: 10px;
+    }
+    .footer {
+      font-size: 0.9em;
+      text-align: center;
+      color: #777;
+    }
+    .footer p {
+      margin: 5px 0;
+    }
+    a {
+      color: #EF6C00;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Appointment Canceled</h1>
+  </div>
+  <div class="content">
+    <p>Dear <span th:text="${clientName}"></span>,</p>
+    <p>We regret to inform you that your appointment for <span th:text="${serviceName}"></span>has been canceled.</p>
+    <p><strong>Appointment Details:</strong></p>
+    <ul>
+      <li>Service: <span th:text="${serviceName}"></span></li>
+      <li>Employee: <span th:text="${employeeName}"></span></li>
+    </ul>
+    <p>If you have any questions please contact us at <a th:href="${contactEmail}"><span th:text="${contactEmail}"></span></a> or visit our website <a th:href="@{http://localhost:3030}">here</a>.</p>
+    <p>We apologize for any inconvenience this may have caused and look forward to assisting you in the future.</p>
+  </div>
+  <div class="footer">
+    <p>Thank you for choosing Flow.</p>
+    <p>Best regards,</p>
+    <p>Flow, Team</p>
+  </div>
+</div>
+</body>
+</html>

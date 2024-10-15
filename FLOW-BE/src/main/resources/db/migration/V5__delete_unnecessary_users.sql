@@ -1,0 +1,1 @@
+DELETE FROM users WHERE email in ('employee@test.com', 'user@test.com')

@@ -1,0 +1,2 @@
+ALTER TABLE services
+    MODIFY COLUMN duration DECIMAL(21,0) NOT NULL;

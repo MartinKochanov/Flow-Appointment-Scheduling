@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f3f3f3; color: #333; padding: 20px;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+  <tr>
+    <td align="center" style="padding: 40px 0; background-color: #f3f3f3; color: black;">
+      <h1 style="font-size: 24px; margin: 0;">Hello, <span th:text="${firstName}"></span>!</h1>
+      <h2 style="font-size: 20px; margin: 0; margin-top: 10px;">Glad we are going to work together</h2>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 40px 0; text-align: left;">
+      <p style="font-size: 16px; margin-bottom: 10px;">These are your credentials:</p>
+      <p style="font-size: 16px; margin-bottom: 5px;"><strong>Email:</strong> <span th:text="${email}"></span></p>
+      <p style="font-size: 16px;"><strong>Password:</strong> <span th:text="${password}"></span></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="padding-top: 30px;">
+      <a th:href="@{http://localhost:3030/sign-in}">
+        <input type="submit" class="btn btn-block btn-lg text-light"
+               id="activationBtn" value="Sign In"
+               style="margin-top: 20px;
+               color: #ffffff;
+                        margin-bottom: 20px;
+                        background-color: #EF6C00;
+                        border: none;
+                        border-radius: 6px;
+                        padding: 15px;
+                        font-size: 20px;
+                        cursor: pointer;"/>
+      </a>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
